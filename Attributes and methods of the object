@@ -6,10 +6,12 @@ class House:
     def go_to(self): # создаем метод
         new_floor = randint(1, 100) 
         if new_floor < 0 or new_floor > self.number_of_floors:
-            print(f'Этажа {new_floor} не существует')
+            print(f'В {self.name} Этажа {new_floor} не существует')
         else:
-            print(f'Переходим на {new_floor} этаж')
+            print(f'В {self.name} Переходим на {new_floor} этаж')
             for i in range(1, new_floor+1):
                 print(i)
 elbrus = House('ЖК Эльбрус', 30)
+dom = House('Дом в деревне', 3)
 elbrus.go_to()
+dom.go_to()
