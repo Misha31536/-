@@ -3,8 +3,7 @@ class House:
     def __init__(self, name, number_of_floors): # указываем атрибуты
         self.name = name
         self.number_of_floors = number_of_floors
-    def go_to(self): # создаем метод
-        new_floor = randint(1, 100) 
+    def go_to(self, new_floor): # создаем метод
         if new_floor < 0 or new_floor > self.number_of_floors:
             print(f'В {self.name} Этажа {new_floor} не существует')
         else:
@@ -13,5 +12,5 @@ class House:
                 print(i)
 elbrus = House('ЖК Эльбрус', 30)
 dom = House('Дом в деревне', 3)
-elbrus.go_to()
-dom.go_to()
+elbrus.go_to(randint(1, 100))
+dom.go_to(randint(1, 100))
